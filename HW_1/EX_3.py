@@ -9,14 +9,20 @@
 # - x=-34; y=-30 -> 3
 
 def checkCoordinates(x,y):
-    text = 4
     if x > 0 and y > 0:
         text = 1
-    elif x < 0 and y > 0:
+        print(f"Точка находится в {text} четверти плоскости")
+    elif x <= 0 and y >= 0:
         text = 2
-    elif x < 0 and y < 0:
+        print(f"Точка находится в {text} четверти плоскости")
+    elif x <= 0 and y <= 0:
         text = 3
-    print(f"Точка находится в {text} четверти плоскости")
+        print(f"Точка находится в {text} четверти плоскости")
+    elif x >= 0 and y <= 0:
+        text = 4
+        print(f"Точка находится в {text} четверти плоскости")
+    elif x == 0 and y == 0:
+        print(f"Коордианты x и y не должны равнятся нулю")
 
 
 x = int(input("Введите число для x"))
